@@ -25,6 +25,7 @@ class _LoginPageState extends State<LoginPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               obscureText: true,
             ),
             ButtonBar(
+              alignment: MainAxisAlignment.center,
               children: <Widget>[
                 // TODO: Add a beveled rectangular border to CANCEL (103)
                 TextButton(
@@ -70,12 +72,18 @@ class _LoginPageState extends State<LoginPage> {
                     _passwordController.clear();
                   },
                 ),
+                TextButton(
+                  child: const Text('Sign Up'),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/signup');
+                  },
+                ),
                 // TODO: Add an elevation to NEXT (103)
                 // TODO: Add a beveled rectangular border to NEXT (103)
                 ElevatedButton(
                   child: const Text('NEXT'),
                   onPressed: () {
-                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/home');
                   },
                 ),
               ],

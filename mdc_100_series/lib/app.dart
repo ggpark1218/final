@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 
 import 'home.dart';
 import 'login.dart';
+import 'signup.dart';
 
 // TODO: Convert ShrineApp to stateful widget (104)
 class ShrineApp extends StatelessWidget {
@@ -32,6 +33,14 @@ class ShrineApp extends StatelessWidget {
       // TODO: Change backLayer field value to CategoryMenuPage (104)
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
+      routes: {
+        // When we navigate to the "/" route, build the FirstScreen Widget
+        // "/" Route로 이동하면, FirstScreen 위젯을 생성합니다.
+        '/signup': (context) => SignForm(),
+        // "/second" route로 이동하면, SecondScreen 위젯을 생성합니다.
+        '/home': (context) => HomePage(),
+        '/detail': (context) => HomePage(),
+      },
       // TODO: Add a theme (103)
     );
   }

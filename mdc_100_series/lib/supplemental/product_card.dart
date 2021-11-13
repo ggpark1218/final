@@ -51,21 +51,25 @@ class ProductCard extends StatelessWidget {
         SizedBox(
           height: kTextBoxHeight * MediaQuery.of(context).textScaleFactor,
           width: 121.0,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                product.name,
-                style: theme.textTheme.headline6,
-                softWrap: false,
-                overflow: TextOverflow.ellipsis,
-                maxLines: 1,
-              ),
-              const SizedBox(height: 4.0),
-              Text(
-                formatter.format(product.price),
-                style: theme.textTheme.subtitle2,
+          child: Row(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                    product.name,
+                    style: theme.textTheme.headline6,
+                    softWrap: false,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                  const SizedBox(height: 4.0),
+                  Text(
+                    formatter.format(product.price),
+                    style: theme.textTheme.subtitle2,
+                  ),
+                ],
               ),
             ],
           ),
