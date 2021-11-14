@@ -12,6 +12,9 @@ dependencies:
   cupertino_icons: ^1.0.3
   shrine_images: ^2.0.1
   url_launcher: ^6.0.12
+  firebase_core: ^1.10.0
+  firebase_auth: ^3.2.0
+
 
 dev_dependencies:
   flutter_test:
